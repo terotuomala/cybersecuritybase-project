@@ -3,7 +3,7 @@ This project uses starter code from https://github.com/cybersecuritybase/cyberse
 ### Things to do before testing:
 - Download and install Owasp ZAP (https://github.com/zaproxy/zaproxy/wiki/Downloads)
 - Open Owasp ZAP and go to "Tools" -> "Options" -> "Local Proxy" -> change the "Port" to 8081 -> click "OK" -> close Owasp ZAP
-- Clone the git repository from xxx
+- Clone the git repository (git clone https://github.com/terotuomala/cybersecuritybase-project.git)
 - Open the project in IDE (e.g. NetBeans)
 - Run the project from IDE or
 - Open command line tool (e.g. PowerShell in Windows) and go to project folder
