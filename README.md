@@ -46,8 +46,8 @@ This project uses starter code from https://github.com/cybersecuritybase/cyberse
 5. Enter "admin" as username and password of your choice and press "Login"
 6. In Owasp ZAP extend "Sites" (on the left), extend "http://localhost:8080"
 7. Right click "POST:login(password,submit,username) and choose "Attack" -> "Fuzz.."
-8. Hightlight the value from password field and click "Add" -> click "Add" -> choose "File" as "Type" -> Click "Select" -> browse the location of 10k_most_common.txt file -> click "Open" -> click "Add" -> click "OK" -> click "Start Fuzzer"
-9. Open the "Fuzzer" tab and sort the results by starting from smallest "Size Resp. Header"
+8. Hightlight the value from password field and click `"Add" -> click "Add" -> choose "File" as "Type" -> Click "Select" -> browse the location of 10k_most_common.txt file -> click "Open" -> click "Add" -> click "OK" -> click "Start Fuzzer"`
+9. Open the `"Fuzzer"` tab and sort the results by starting from smallest `"Size Resp. Header"`
 10. Inspect the results
 11. Take a wild guess what the right password is and try it out :)
 
