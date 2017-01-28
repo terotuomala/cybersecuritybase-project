@@ -43,9 +43,9 @@ This project uses starter code from https://github.com/cybersecuritybase/cyberse
 2. Open Owasp ZAP
 3. Configure your browser to use Owasp ZAP as proxy (in Firefox you can use e.g. FoxyProxy)
 4. Go to URL http://localhost:8080/login
-5. Enter "admin" as username and password of your choice and press "Login"
-6. In Owasp ZAP extend "Sites" (on the left), extend "http://localhost:8080"
-7. Right click "POST:login(password,submit,username) and choose "Attack" -> "Fuzz.."
+5. Enter *"admin"* as username and password of your choice and press *"Login"*
+6. In Owasp ZAP extend *"Sites"* (on the left), extend "http://localhost:8080"
+7. Right click *"POST:login(password,submit,username)* and choose *"Attack" -> "Fuzz.."*
 8. Hightlight the value from password field and click *"Add" -> click "Add" -> choose "File" as "Type" -> Click "Select" -> browse the location of 10k_most_common.txt file -> click "Open" -> click "Add" -> click "OK" -> click "Start Fuzzer"*
 9. Open the *"Fuzzer"* tab and sort the results by starting from smallest *"Size Resp. Header"*
 10. Inspect the results
@@ -60,12 +60,12 @@ This project uses starter code from https://github.com/cybersecuritybase/cyberse
 **Steps to reproduce:**
 
 1. Go to URL http://localhost:8080
-2. Add some text to `"name"` and `"address"` fields and click `"Submit"`
-3. Click `"Return to registration page"` 
-4. Click `"Login"`
-5. Enter `"admin"` as username and correct password what you found in *"Issue 2: A6-Sensitive Data Exposure"* part and click `"Login"`
-6. You can now see `"Participants"` link below `"Login"` link
-7. Click `"Participants"` link
+2. Add some text to *"name"* and *"address"* fields and click *"Submit"*
+3. Click *"Return to registration page"* 
+4. Click *"Login"*
+5. Enter *"admin"* as username and correct password what you found in **"Issue 2: A6-Sensitive Data Exposure"*** part and click *"Login"*
+6. You can now see *"Participants"* link below *"Login"* link
+7. Click *"Participants"* link
 8. You can now see the participant what you added
 9. Restart the application
 10. Repeat steps 1-3 and do not login
@@ -86,20 +86,20 @@ This project uses starter code from https://github.com/cybersecuritybase/cyberse
 ```
 - Restart the application
 - Go to URL http://localhost:8080/participants
-- Now the `"participants"` page requires authentication
+- Now the *"participants"* page requires authentication
 
 
 ### Issue 4: A3-Cross-Site Scripting (XSS)
 **Steps to reproduce:**
 
 1. Go to URL http://localhost:8080
-2. Add some text to `"name"` field
-3. Add text `<script>alert('PWNED');</script>` to `"address"` field
+2. Add some text to *"name"* field
+3. Add text `<script>alert('PWNED');</script>` to *"address"* field
 4. Go to URL http://localhost:8080/participants
 5. You can now see pop-up window with text 'PWNED'
 
 **Solution:**
-- Open `"participants.html"` in a editor of your choice
+- Open *"participants.html"* in a editor of your choice
 - Change `"th:utext"` span fields to `"th:text"`
 - Restart the application
 - Repeat steps 1-4 and verify that you cannot see pop-up window with text 'PWNED' anymore
