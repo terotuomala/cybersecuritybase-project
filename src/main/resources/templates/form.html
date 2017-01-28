@@ -12,7 +12,18 @@
             <p><label for="address">Address</label>: <input type="text" name="address" id="address"/></p>
             <p><input type="submit" value="Submit" /></p>
         </form>
+        
+        <div>
+            <a href="/login">Login</a>
+        </div>
+        <div sec:authorize="isAuthenticated()">
+            <a href="/participants">Participants</a>
+        </div>
+        <br />
+        <div>
+            Current user: <span sec:authentication="name"></span>
+        </div>
+        
 
-        <p></p>
     </body>
 </html>

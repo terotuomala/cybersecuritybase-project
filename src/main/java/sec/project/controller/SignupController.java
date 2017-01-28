@@ -26,6 +26,9 @@ public class SignupController {
 
     @RequestMapping(value = "/form", method = RequestMethod.POST)
     public String submitForm(@RequestParam String name, @RequestParam String address) {
+        if (name.trim().isEmpty() || address.trim().isEmpty()) {
+            return "redirect:/form";
+        }
         signupRepository.save(new Signup(name, address));
         return "done";
     }

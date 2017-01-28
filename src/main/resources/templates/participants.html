@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Participants</title>
+    </head>
+    <body>
+
+        <h1>List of participants</h1>
+        <ol>
+            <li th:each="participant : ${participants}">
+                <span th:utext="${participant.name}"></span>
+                <span th:utext="${participant.address}"></span>
+                <form th:action="@{/participants/delete/{id}(id=${participant.id})}" th:method="DELETE"><input type="submit" value="Remove"/></form>
+            </li>
+        </ol>
+        
+        <div>
+            <a href="/form">Return to registration page</a>
+        </div>
+        <br />
+        <div>
+            Current user: <span sec:authentication="name"></span>
+        </div>
+
+    </body>
+</html>
