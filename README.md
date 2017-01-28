@@ -63,7 +63,7 @@ This project uses starter code from https://github.com/cybersecuritybase/cyberse
 2. Add some text to *"name"* and *"address"* fields and click *"Submit"*
 3. Click *"Return to registration page"* 
 4. Click *"Login"*
-5. Enter *"admin"* as username and correct password what you found in **"Issue 2: A6-Sensitive Data Exposure"*** part and click *"Login"*
+5. Enter *"admin"* as username and correct password what you found in **"Issue 2: A6-Sensitive Data Exposure"** part and click *"Login"*
 6. You can now see *"Participants"* link below *"Login"* link
 7. Click *"Participants"* link
 8. You can now see the participant what you added
