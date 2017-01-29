@@ -55,16 +55,16 @@ This project uses starter code from https://github.com/cybersecuritybase/cyberse
 **Solution:**
 - Use more secure password (e.g. https://xkcd.com/936/)
 - Use encrypted HTTPS (SSL/TLS) connection for all pages
-- You can enable HTTPS in embedded Tomcat by doing following (THIS IS OPTIONAL):
+- You can enable HTTPS in embedded Tomcat by doing following (**THIS IS OPTIONAL**):
 - Open command line tool (e.g. PowerShell in Windows, remember to run it as administrator)
-- Go to your java installation directory and open "bin" folder  (in Windows cd "C:\Program Files\your_java_direcotry\bin")
-- Run command keytool.exe -genkey -alias https_key -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
+- Go to your java installation directory and open *"bin"* folder  (in Windows *cd "C:\Program Files\your_java_direcotry\bin"*)
+- Run command `keytool.exe -genkey -alias https_key -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650`
 - Enter password and answer to other questions asked
-- Copy "keystore.p12" file from the directory where you are now to your projects root directory
-- Open "application.properties" and add the folowing lines:
+- Copy *"keystore.p12"* file from the directory where you are now to your projects root directory
+- Open *"application.properties"* and add the folowing lines:
 ```java
 server.ssl.key-store=keystore.p12
-server.ssl.key-store-password=password1234
+server.ssl.key-store-password=your_keys_password
 server.ssl.keyStoreType=PKCS12
 server.ssl.keyAlias=https_key
 server.port=8443
