@@ -70,7 +70,7 @@ server.ssl.keyAlias=https_key
 server.port=8443
 ```
 - Restart the application
-- Go to URL http://localhost:8443
+- Go to URL https://localhost:8443
 - You can now see that HTTPS is now enabled
 - Your browser is going to complain that the certificate is not trusted etc. because it is now installed in the Trusted Root Certification Authorities store
 
