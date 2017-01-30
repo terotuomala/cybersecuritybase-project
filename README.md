@@ -57,7 +57,7 @@ This project uses starter code from https://github.com/cybersecuritybase/cyberse
 - Use encrypted HTTPS (SSL/TLS) connection for all pages
 - You can enable HTTPS in embedded Tomcat by doing following (**THIS IS OPTIONAL**):
 - Open command line tool (e.g. PowerShell in Windows, remember to run it as administrator)
-- Go to your java installation directory and open *"bin"* folder  (in Windows *cd "C:\Program Files\your_java_direcotry\bin"*)
+- Go to your java installation directory and open *"bin"* folder  (in Windows *cd "C:\Program Files\your_java_directory\bin"*)
 - Run command `keytool.exe -genkey -alias https_key -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650`
 - Enter password and answer to other questions asked
 - Copy *"keystore.p12"* file from the directory where you are now to your projects root directory
@@ -72,7 +72,7 @@ server.port=8443
 - Restart the application
 - Go to URL https://localhost:8443
 - You can now see that HTTPS is now enabled
-- Your browser is going to complain that the certificate is not trusted etc. because it is now installed in the Trusted Root Certification Authorities store
+- Your browser is going to complain that the certificate is not trusted etc. because it is not installed in the Trusted Root Certification Authorities store
 
 ### Issue 3: A7-Missing Function Level Access Control
 **Steps to reproduce:**
